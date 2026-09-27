@@ -1,0 +1,8 @@
+{
+  "name": "pablo-nimo-formacion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs"
+  }
+}
