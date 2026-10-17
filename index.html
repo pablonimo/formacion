@@ -19,6 +19,7 @@
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
     <nav id="main-nav" aria-label="Navegación principal">
       <a href="#itinerarios">Itinerarios</a>
+      <a href="#skills">Skills</a>
       <a href="#formacion">Formación impartida</a>
       <a href="#proxectos">Proxectos</a>
       <a class="nav-cta" href="#contacto">Falamos?</a>
@@ -141,6 +142,105 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <section class="skills-overview section-pad" id="skills" aria-labelledby="skills-title">
+      <header class="section-heading skills-heading">
+        <div>
+          <p class="eyebrow">Procesos propios con IA</p>
+          <h2 id="skills-title">Catro fluxos que xa resolven traballo real.</h2>
+        </div>
+        <p>Non son indicacións soltas: cada skill reúne criterios, fontes, controis e ferramentas para converter materiais do centro en produtos revisables.</p>
+      </header>
+
+      <div class="skill-summary-grid" aria-label="Resumo das skills">
+        <a class="skill-summary-card" href="#laboratorio" data-open-skill="documentos">
+          <span class="skill-summary-number">01</span>
+          <h3>Documentos de centro</h3>
+          <p>Do contido e a identidade visual a unha peza lista para imprimir.</p>
+          <strong>Fichas · circulares · diplomas · PDF</strong>
+        </a>
+        <a class="skill-summary-card" href="#laboratorio" data-open-skill="timbre">
+          <span class="skill-summary-number">02</span>
+          <h3>Timbre semanal</h3>
+          <p>Da música e o calendario a unha campaña coordinada en varios formatos.</p>
+          <strong>Cartel A3 · TV 4K · WhatsApp</strong>
+        </a>
+        <a class="skill-summary-card" href="#laboratorio" data-open-skill="semanario">
+          <span class="skill-summary-number">03</span>
+          <h3>Semanario de aula</h3>
+          <p>Das notas e fotografías a unha crónica contrastada e publicable.</p>
+          <strong>Entrada web · galería · arquivo</strong>
+        </a>
+        <a class="skill-summary-card" href="#laboratorio" data-open-skill="avaliacion">
+          <span class="skill-summary-number">04</span>
+          <h3>Traballos escaneados</h3>
+          <p>Dun lote desordenado a unha devolución formativa con control docente.</p>
+          <strong>PDF individual · informe · seguimento</strong>
+        </a>
+      </div>
+
+      <div class="skills-bridge">
+        <p><span>Para unha lectura rápida</span><strong>O esencial está aquí: problema, proceso e produto.</strong></p>
+        <a class="button button-primary" href="#laboratorio">Entrar no laboratorio <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="skills-lab section-pad" id="laboratorio" aria-labelledby="lab-title">
+      <header class="lab-heading">
+        <div>
+          <p class="eyebrow">Laboratorio interactivo</p>
+          <h2 id="lab-title">Abrir o proceso por dentro.</h2>
+        </div>
+        <p>Escolle unha skill e percorre as decisións que conectan os materiais de partida cun produto útil. Os puntos laranxa sinalan onde a revisión humana é imprescindible.</p>
+      </header>
+
+      <div class="skill-tabs" role="tablist" aria-label="Escolle unha skill">
+        <button type="button" role="tab" id="tab-documentos" aria-controls="lab-panel" aria-selected="true" data-skill="documentos">Documentos</button>
+        <button type="button" role="tab" id="tab-timbre" aria-controls="lab-panel" aria-selected="false" data-skill="timbre" tabindex="-1">Timbre</button>
+        <button type="button" role="tab" id="tab-semanario" aria-controls="lab-panel" aria-selected="false" data-skill="semanario" tabindex="-1">Semanario</button>
+        <button type="button" role="tab" id="tab-avaliacion" aria-controls="lab-panel" aria-selected="false" data-skill="avaliacion" tabindex="-1">Escaneos</button>
+      </div>
+
+      <div class="lab-panel" id="lab-panel" role="tabpanel" aria-labelledby="tab-documentos" tabindex="0">
+        <div class="lab-intro">
+          <div>
+            <p class="lab-kicker" id="lab-kicker">Identidade aplicada</p>
+            <h3 id="lab-name">Documentos de centro</h3>
+          </div>
+          <p id="lab-description">Aplica a identidade visual do CEIP sen perder lexibilidade, función nin control sobre a información.</p>
+        </div>
+
+        <div class="lab-map" aria-label="Orixes, transformación e produtos">
+          <section class="lab-column lab-origins" aria-labelledby="lab-origins-title">
+            <p class="lab-column-label" id="lab-origins-title">01 · Orixes</p>
+            <ul id="lab-origins-list"></ul>
+          </section>
+
+          <section class="lab-transform" aria-labelledby="lab-transform-title">
+            <p class="lab-column-label" id="lab-transform-title">02 · Transforma</p>
+            <div class="lab-flow" id="lab-flow"></div>
+            <div class="lab-stage-detail" id="lab-stage-detail" aria-live="polite"></div>
+          </section>
+
+          <section class="lab-column lab-products" aria-labelledby="lab-products-title">
+            <p class="lab-column-label" id="lab-products-title">03 · Produtos</p>
+            <ul id="lab-products-list"></ul>
+          </section>
+        </div>
+
+        <div class="lab-proof">
+          <div class="product-preview" id="lab-preview" aria-hidden="true"></div>
+          <div class="proof-copy">
+            <p class="lab-column-label">Exemplo de saída</p>
+            <h3 id="lab-example-title">Ficha de valor posicional · 3.º EP</h3>
+            <p id="lab-example-copy">Documento imprimible coa xerarquía visual, os espazos de resposta e a versión final preparados para unha revisión completa.</p>
+            <ul class="proof-tags" id="lab-example-tags" aria-label="Formatos do exemplo"></ul>
+            <p class="proof-note" id="lab-example-note"></p>
+          </div>
+        </div>
+      </div>
+      <noscript><p class="no-script">O resumo das catro skills está dispoñible arriba. Activa JavaScript para explorar o laboratorio paso a paso.</p></noscript>
     </section>
 
     <section class="projects section-pad" id="proxectos" aria-labelledby="projects-title">
