@@ -54,11 +54,11 @@ const skillLabData = {
       title: 'Ficha, circular e diploma',
       copy: 'A mesma skill pode producir materiais de aula, comunicacións para as familias e pezas institucionais coa identidade do centro.',
       tags: ['A4', 'PDF imprimible', 'DOCX ou ODT editable'],
-      note: 'Mostras ilustrativas: permiten ver a estrutura do produto sen empregar datos reais.',
+      note: 'Exemplos reais da biblioteca oficial de estilo do CEIP. Mantéñense os campos como marcadores, sen nomes de persoas.',
       samples: [
-        { type: 'document', format: 'A4 · PDF', title: 'Ficha de valor posicional', rows: ['Nome e data', 'Exercicios graduados', 'Espazo para explicar'] },
-        { type: 'notice', format: 'A4 · PDF', title: 'Circular para familias', rows: ['Motivo e calendario', 'Instrucións claras', 'Contacto do centro'] },
-        { type: 'certificate', format: 'A4 horizontal', title: 'Diploma de participación', rows: ['Nome do proxecto', 'Nome da persoa', 'Sinatura e selo'] }
+        { type: 'document', format: 'Modelo oficial editable', title: 'Circular ás familias', caption: 'Cabeceira, xerarquía, corpo e peche institucional listos para adaptar.', src: 'assets/laboratorio-real/documento-circular.png', alt: 'Plantilla oficial real dunha circular ás familias do CEIP de Belesar' },
+        { type: 'document', format: 'Modelo oficial editable', title: 'Certificado', caption: 'Certificado de participación coa identidade completa do centro.', src: 'assets/laboratorio-real/documento-certificado.png', alt: 'Plantilla oficial real dun certificado do CEIP de Belesar' },
+        { type: 'document', format: 'Modelo oficial editable', title: 'Diploma', caption: 'Diploma horizontal preparado para personalizar, imprimir ou exportar.', src: 'assets/laboratorio-real/documento-diploma.png', alt: 'Plantilla oficial real dun diploma do CEIP de Belesar' }
       ]
     }
   },
@@ -79,11 +79,11 @@ const skillLabData = {
       title: 'Cartel, pantalla e mensaxe semanal',
       copy: 'Unha mesma selección musical convértese nun paquete coordinado para o corredor, as televisións e a difusión ás familias.',
       tags: ['A3', '3840 × 2160', 'WhatsApp', 'TV'],
-      note: 'Mostras ilustrativas. A letra completa só se incorpora desde unha fonte local autorizada.',
+      note: 'Produtos reais da campaña do 5 de outubro de 2026 e unha mensaxe semanal xa preparada. Non se publican letras completas.',
       samples: [
-        { type: 'poster', format: 'A3 · PNG/PDF', title: 'Cartel do timbre', rows: ['Selección da semana', 'Artistas e cancións', 'Horarios principais'] },
-        { type: 'screen', format: '3840 × 2160', title: 'Pantalla de letra', rows: ['Título e artista', 'Letra por bloques', 'Marca do centro'] },
-        { type: 'message', format: 'WhatsApp', title: 'Mensaxe de difusión', rows: ['Esta semana soa…', 'Resumo da proposta', 'Nota para as familias'] }
+        { type: 'poster', format: 'A3 · PNG/PDF', title: 'Cartel semanal', caption: 'Versión vertical para imprimir e colocar no centro.', src: 'assets/laboratorio-real/timbre-cartel-a3.png', alt: 'Cartel A3 real do Timbre Belesar da semana do 5 de outubro de 2026' },
+        { type: 'screen', format: '3840 × 2160', title: 'Cartel para as pantallas', caption: 'Versión 16:9 para as televisións do corredor e da biblioteca.', src: 'assets/laboratorio-real/timbre-cartel-16x9.png', alt: 'Cartel horizontal real para as pantallas do Timbre Belesar' },
+        { type: 'message', format: 'WhatsApp', title: 'Mensaxe semanal', caption: 'Texto real listo para copiar e difundir á comunidade educativa.', text: '🎶 *Esta semana, o timbre convida a falar, bailar e compartir.*\n\nÁs veces unha pequena conversa é o mellor xeito de empezar o día. Logo chegan novas voces cunha invitación directa: sácame a bailar.\n\n🎧 *Timbre Belesar 26-27*' }
       ]
     }
   },
@@ -104,11 +104,11 @@ const skillLabData = {
       title: 'Entrada, galería e arquivo semanal',
       copy: 'As notas e fotos convértense nunha páxina completa: crónica, imaxes contextualizadas e acceso ordenado ás semanas anteriores.',
       tags: ['Web', 'Galería', 'Móbil', 'Arquivo'],
-      note: 'A vista é unha representación; as fotografías reais seguen a política de publicación do centro.',
+      note: 'Fotografías reais empregadas na semana 41. Seleccionáronse escenas sen nomes nin rostros identificables.',
       samples: [
-        { type: 'article', format: 'Entrada web', title: 'Crónica da semana', rows: ['Que fixemos', 'Como nos organizamos', 'Que aprendemos'] },
-        { type: 'gallery', format: 'Galería adaptable', title: 'Fotos con contexto', rows: ['Miniaturas coidadas', 'Pés informativos', 'Vista ampliada'] },
-        { type: 'archive', format: 'Arquivo web', title: 'Índice de semanas', rows: ['Semana e datas', 'Resumo breve', 'Acceso á entrada'] }
+        { type: 'story', format: 'Semanario · S41', title: 'Guía de campo preparada', caption: 'As guías impresas documentan o inicio da procura de ovos e eirugas.', src: 'assets/laboratorio-real/semanario-guia-bolboretas.jpg', alt: 'Fotografía real das guías de campo preparadas para o semanario da semana 41' },
+        { type: 'story', format: 'Semanario · S41', title: 'Mariposario de aula', caption: 'O rexistro visual acompaña a crónica e explica como continúa a observación.', src: 'assets/laboratorio-real/semanario-mariposario.jpg', alt: 'Fotografía real do mariposario preparado na aula' },
+        { type: 'story', format: 'Semanario · S41', title: 'Un achado por identificar', caption: 'A entrada conserva a dúbida como hipótese e non presenta a identificación como certa.', src: 'assets/laboratorio-real/semanario-achado.jpg', alt: 'Fotografía real dun pequeno obxecto observado na aula e pendente de identificar' }
       ]
     }
   },
@@ -129,11 +129,11 @@ const skillLabData = {
       title: 'PDF individual, informe e seguimento',
       copy: 'O lote escaneado remata en tres produtos separados: a devolución para cada alumno, a visión global do grupo e unha nota de continuidade.',
       tags: ['PDF individual', 'Informe codificado', 'Seguimento'],
-      note: 'Demostración sintética: a web non publica traballos nin datos reais do alumnado.',
+      note: 'Páxinas reais de devolución. Non conteñen nomes; dúas conservan só o código interno “T”, autorizado para esta mostra.',
       samples: [
-        { type: 'feedback', format: 'PDF · código A01', title: 'Devolución individual', rows: ['Páxinas reunidas', 'Logro observable', 'Seguinte paso'] },
-        { type: 'report', format: 'Informe codificado', title: 'Visión do grupo', rows: ['Padróns detectados', 'Dificultades comúns', 'Decisións docentes'] },
-        { type: 'followup', format: 'Rexistro privado', title: 'Nota de seguimento', rows: ['Actividade e data', 'Evidencia mínima', 'Revisión pendente'] }
+        { type: 'feedback', format: 'PDF individual', title: 'Revisión dun texto', caption: 'Devolución breve e accionable: maiúscula, espazos e punto final.', src: 'assets/laboratorio-real/avaliacion-lingua.png', alt: 'Páxina real de devolución formativa dunha actividade de lingua, sen nome do alumno' },
+        { type: 'feedback', format: 'PDF · código T', title: 'Repasamos o reloxo', caption: 'Evidencia observada e seguinte paso expresados nunha páxina independente.', src: 'assets/laboratorio-real/avaliacion-mates.png', alt: 'Páxina real de devolución formativa dunha actividade sobre o reloxo, identificada só co código T' },
+        { type: 'feedback', format: 'PDF · código T', title: 'O tempo e a auga', caption: 'Comentario específico sobre o traballo e orientación para continuar.', src: 'assets/laboratorio-real/avaliacion-naturais.png', alt: 'Páxina real de devolución formativa dunha actividade sobre o tempo e a auga, identificada só co código T' }
       ]
     }
   }
@@ -148,16 +148,31 @@ const labStageDetail = document.querySelector('#lab-stage-detail');
 
 function renderProductPreview(samples) {
   return samples.map((sample, index) => {
-    const rows = sample.rows.map((row) => `<span>${escapeHtml(row)}</span>`).join('');
+    const number = String(index + 1).padStart(2, '0');
+    if (sample.text) {
+      return `
+        <article class="preview-sample preview-${escapeHtml(sample.type)} preview-text-sample">
+          <div class="preview-sample-head">
+            <span>${number}</span>
+            <small>${escapeHtml(sample.format)}</small>
+          </div>
+          <strong>${escapeHtml(sample.title)}</strong>
+          <pre>${escapeHtml(sample.text)}</pre>
+          <p>${escapeHtml(sample.caption)}</p>
+        </article>`;
+    }
     return `
-      <article class="preview-sample preview-${escapeHtml(sample.type)}">
-        <div class="preview-sample-head">
-          <span>${String(index + 1).padStart(2, '0')}</span>
-          <small>${escapeHtml(sample.format)}</small>
-        </div>
-        <strong>${escapeHtml(sample.title)}</strong>
-        <div class="preview-lines">${rows}</div>
-      </article>`;
+      <figure class="preview-sample preview-${escapeHtml(sample.type)}">
+        <a class="preview-media" href="${escapeHtml(sample.src)}" target="_blank" rel="noopener" aria-label="Abrir a tamaño completo: ${escapeHtml(sample.title)}">
+          <img src="${escapeHtml(sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
+          <span>Ver produto real</span>
+        </a>
+        <figcaption>
+          <div class="preview-sample-head"><span>${number}</span><small>${escapeHtml(sample.format)}</small></div>
+          <strong>${escapeHtml(sample.title)}</strong>
+          <p>${escapeHtml(sample.caption)}</p>
+        </figcaption>
+      </figure>`;
   }).join('');
 }
 
