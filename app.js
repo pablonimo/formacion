@@ -44,6 +44,7 @@ const skillLabData = {
     description: 'Aplica a identidade visual do CEIP sen perder lexibilidade, función nin control sobre a información.',
     origins: ['Contido e finalidade', 'Datos vixentes do centro', 'Guía visual e modelos ODT'],
     products: ['Ficha ou actividade', 'Circular, diploma ou certificado', 'PDF final verificado'],
+    diagram: { src: 'assets/diagramas-fluxo/documentos.png', title: 'Fluxo lóxico dos documentos de centro', caption: 'Entrada, decisións, revisión docente e exportación final nun esquema normalizado.', alt: 'Diagrama de fluxo normalizado da automatización de documentos de centro' },
     stages: [
       { title: 'Clasificar', detail: 'Identifica quen vai usar o documento, en que soporte e que acción debe permitir.' },
       { title: 'Compoñer', detail: 'Escolle unha plantilla oficial ou constrúe a xerarquía con tipografía, cor e espazos coherentes.' },
@@ -68,6 +69,7 @@ const skillLabData = {
     description: 'Coordina música, comunicación e pantallas nun fluxo único, con revisión antes de calquera despregamento.',
     origins: ['MP3 e información musical', 'Letras locais e portadas', 'Calendario lectivo e horarios'],
     products: ['Cartel A3 e PNG', 'Pantallas de letra 4K', 'WhatsApp e paquete para TV'],
+    diagram: { src: 'assets/diagramas-fluxo/timbre.png', title: 'Fluxo lóxico do timbre semanal', caption: 'A selección musical convértese nun paquete multiformato só despois dos controis e da aprobación humana.', alt: 'Diagrama de fluxo normalizado da automatización do timbre semanal' },
     stages: [
       { title: 'Inventariar', detail: 'Detecta cancións, horas, idioma, portadas e correspondencia entre os ficheiros.' },
       { title: 'Adecuar', detail: 'Revisa transcrición, galego normativo e posibles expresións non axeitadas para o centro.', human: true },
@@ -93,6 +95,7 @@ const skillLabData = {
     description: 'Converte notas e fotografías dispersas nunha crónica fiable, coidadosa coa privacidade e fácil de consultar.',
     origins: ['Notas de feitos realizados', 'Fotos da semana', 'Estado das semanas ISO'],
     products: ['Entrada web en galego', 'Galería con pés propios', 'Arquivo semanal navegable'],
+    diagram: { src: 'assets/diagramas-fluxo/semanario.png', title: 'Fluxo lóxico do semanario', caption: 'Contraste, privacidade e revisión docente forman parte do proceso antes de publicar e arquivar.', alt: 'Diagrama de fluxo normalizado da automatización do semanario de aula' },
     stages: [
       { title: 'Situar', detail: 'Distingue semanas publicadas, rematadas, actuais e incompletas antes de escoller.' },
       { title: 'Contrastar', detail: 'Cruza notas, datas e imaxes; unha actividade prevista non se presenta como realizada.' },
@@ -101,14 +104,12 @@ const skillLabData = {
       { title: 'Publicar', detail: 'Só tras aprobación, xera miniaturas, comproba o carrusel e arquiva a semana verificada.', human: true }
     ],
     example: {
-      title: 'Entrada, galería e arquivo semanal',
-      copy: 'As notas e fotos convértense nunha páxina completa: crónica, imaxes contextualizadas e acceso ordenado ás semanas anteriores.',
+      title: 'Un semanario completo de exemplo',
+      copy: 'Unha copia navegable da semana 41 permite ver a crónica, a xerarquía editorial e a galería no seu contexto real.',
       tags: ['Web', 'Galería', 'Móbil', 'Arquivo'],
-      note: 'Fotografías reais empregadas na semana 41. Seleccionáronse escenas sen nomes nin rostros identificables.',
+      note: 'Copia pública anonimizada: non aparecen nomes e todos os rostros visibles do alumnado están pixelados.',
       samples: [
-        { type: 'story', format: 'Semanario · S41', title: 'Guía de campo preparada', caption: 'As guías impresas documentan o inicio da procura de ovos e eirugas.', src: 'assets/laboratorio-real/semanario-guia-bolboretas.jpg', alt: 'Fotografía real das guías de campo preparadas para o semanario da semana 41' },
-        { type: 'story', format: 'Semanario · S41', title: 'Mariposario de aula', caption: 'O rexistro visual acompaña a crónica e explica como continúa a observación.', src: 'assets/laboratorio-real/semanario-mariposario.jpg', alt: 'Fotografía real do mariposario preparado na aula' },
-        { type: 'story', format: 'Semanario · S41', title: 'Un achado por identificar', caption: 'A entrada conserva a dúbida como hipótese e non presenta a identificación como certa.', src: 'assets/laboratorio-real/semanario-achado.jpg', alt: 'Fotografía real dun pequeno obxecto observado na aula e pendente de identificar' }
+        { type: 'page', format: 'Páxina web · S41', title: 'Semanario de exemplo', caption: 'Abre unha semana completa dentro desta web, con fotografías reais anonimizadas.', src: 'assets/semanario-exemplo/vivaldi-aula-pixelada.png', alt: 'Vista previa do semanario de exemplo con alumnado pixelado', href: 'semanario-exemplo/' }
       ]
     }
   },
@@ -118,6 +119,7 @@ const skillLabData = {
     description: 'Organiza lotes complexos e prepara evidencias e comentarios sen automatizar a decisión docente.',
     origins: ['PDF ou imaxes escaneadas', 'Actividade e criterios orixinais', 'Contexto do grupo'],
     products: ['PDF individual revisado', 'Informe xeral codificado', 'Nota para o seguimento docente'],
+    diagram: { src: 'assets/diagramas-fluxo/escaneos.png', title: 'Fluxo lóxico dos traballos escaneados', caption: 'As páxinas agrúpanse por código, revísanse con criterios e só se producen despois da validación docente.', alt: 'Diagrama de fluxo normalizado da automatización de traballos escaneados' },
     stages: [
       { title: 'Inventariar', detail: 'Rexistra páxinas, orientación, lexibilidade, duplicados e OCR sen modificar os orixinais.' },
       { title: 'Agrupar', detail: 'Relaciona caras, actividade e código do alumno; as asociacións dubidosas quedan pendentes.' },
@@ -126,14 +128,13 @@ const skillLabData = {
       { title: 'Producir', detail: 'Crea e reabre os PDF, verifica o lote e consolida un seguimento minimizado.' }
     ],
     example: {
-      title: 'PDF individual, informe e seguimento',
-      copy: 'O lote escaneado remata en tres produtos separados: a devolución para cada alumno, a visión global do grupo e unha nota de continuidade.',
-      tags: ['PDF individual', 'Informe codificado', 'Seguimento'],
-      note: 'Páxinas reais de devolución. Non conteñen nomes; dúas conservan só o código interno “T”, autorizado para esta mostra.',
+      title: 'Un traballo real e a súa devolución',
+      copy: 'Dúas páxinas do mesmo PDF mostran a produción manuscrita xa comentada e a devolución formativa final.',
+      tags: ['Traballo real', 'Corrección contextual', 'Devolución final'],
+      note: 'Exemplo real anonimizado: seleccionáronse páxinas sen nome, apelidos nin código persoal visible.',
       samples: [
-        { type: 'feedback', format: 'PDF individual', title: 'Revisión dun texto', caption: 'Devolución breve e accionable: maiúscula, espazos e punto final.', src: 'assets/laboratorio-real/avaliacion-lingua.png', alt: 'Páxina real de devolución formativa dunha actividade de lingua, sen nome do alumno' },
-        { type: 'feedback', format: 'PDF · código T', title: 'Repasamos o reloxo', caption: 'Evidencia observada e seguinte paso expresados nunha páxina independente.', src: 'assets/laboratorio-real/avaliacion-mates.png', alt: 'Páxina real de devolución formativa dunha actividade sobre o reloxo, identificada só co código T' },
-        { type: 'feedback', format: 'PDF · código T', title: 'O tempo e a auga', caption: 'Comentario específico sobre o traballo e orientación para continuar.', src: 'assets/laboratorio-real/avaliacion-naturais.png', alt: 'Páxina real de devolución formativa dunha actividade sobre o tempo e a auga, identificada só co código T' }
+        { type: 'feedback', format: 'PDF · páxina de traballo', title: 'Texto manuscrito corrixido', caption: 'A produción mantense visible e engádese unha indicación formativa concreta ao pé.', src: 'assets/laboratorio-real/escaneo-traballo-corrixido.png', alt: 'Páxina real anonimizada dun texto manuscrito cun comentario de corrección' },
+        { type: 'feedback', format: 'PDF · devolución final', title: 'Valoración para continuar', caption: 'A síntese recolle logros observables e aspectos que aínda están en proceso.', src: 'assets/laboratorio-real/escaneo-devolucion-final.png', alt: 'Páxina real anonimizada coa devolución formativa final do mesmo traballo' }
       ]
     }
   }
@@ -145,6 +146,7 @@ const labOrigins = document.querySelector('#lab-origins-list');
 const labProducts = document.querySelector('#lab-products-list');
 const labFlow = document.querySelector('#lab-flow');
 const labStageDetail = document.querySelector('#lab-stage-detail');
+const labDiagram = document.querySelector('#lab-diagram');
 
 function renderProductPreview(samples) {
   return samples.map((sample, index) => {
@@ -161,12 +163,26 @@ function renderProductPreview(samples) {
           <p>${escapeHtml(sample.caption)}</p>
         </article>`;
     }
+    if (sample.href) {
+      return `
+        <figure class="preview-sample preview-${escapeHtml(sample.type)} preview-page-sample">
+          <a class="preview-media" href="${escapeHtml(sample.href)}" aria-label="Abrir dentro da web: ${escapeHtml(sample.title)}">
+            <img src="${escapeHtml(sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
+            <span>Abrir páxina web</span>
+          </a>
+          <figcaption>
+            <div class="preview-sample-head"><span>${number}</span><small>${escapeHtml(sample.format)}</small></div>
+            <strong>${escapeHtml(sample.title)}</strong>
+            <p>${escapeHtml(sample.caption)}</p>
+          </figcaption>
+        </figure>`;
+    }
     return `
       <figure class="preview-sample preview-${escapeHtml(sample.type)}">
-        <a class="preview-media" href="${escapeHtml(sample.src)}" target="_blank" rel="noopener" aria-label="Abrir a tamaño completo: ${escapeHtml(sample.title)}">
+        <button type="button" class="preview-media gallery-trigger" data-gallery-src="${escapeHtml(sample.src)}" data-gallery-title="${escapeHtml(sample.title)}" data-gallery-caption="${escapeHtml(sample.caption)}" aria-label="Abrir na galería: ${escapeHtml(sample.title)}">
           <img src="${escapeHtml(sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
-          <span>Ver produto real</span>
-        </a>
+          <span>Ver na galería</span>
+        </button>
         <figcaption>
           <div class="preview-sample-head"><span>${number}</span><small>${escapeHtml(sample.format)}</small></div>
           <strong>${escapeHtml(sample.title)}</strong>
@@ -210,6 +226,12 @@ function renderSkillLab(key) {
   document.querySelector('#lab-example-tags').innerHTML = skill.example.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join('');
   document.querySelector('#lab-example-note').textContent = skill.example.note;
   document.querySelector('#lab-preview').innerHTML = renderProductPreview(skill.example.samples);
+  labDiagram.innerHTML = `
+    <button type="button" class="diagram-media gallery-trigger" data-gallery-src="${escapeHtml(skill.diagram.src)}" data-gallery-title="${escapeHtml(skill.diagram.title)}" data-gallery-caption="${escapeHtml(skill.diagram.caption)}" aria-label="Ampliar: ${escapeHtml(skill.diagram.title)}">
+      <img src="${escapeHtml(skill.diagram.src)}" alt="${escapeHtml(skill.diagram.alt)}" loading="lazy" decoding="async">
+      <span>Ampliar diagrama</span>
+    </button>
+    <figcaption><strong>${escapeHtml(skill.diagram.title)}</strong><span>${escapeHtml(skill.diagram.caption)}</span></figcaption>`;
 
   labTabs.forEach((tab) => {
     const selected = tab.dataset.skill === key;
@@ -244,6 +266,48 @@ document.querySelectorAll('[data-open-skill]').forEach((link) => {
 });
 
 if (labPanel) renderSkillLab('documentos');
+
+const mediaDialog = document.querySelector('#media-dialog');
+const mediaDialogImage = document.querySelector('#media-dialog-image');
+const mediaDialogTitle = document.querySelector('#media-dialog-title');
+const mediaDialogCaption = document.querySelector('#media-dialog-caption');
+const mediaDialogCounter = document.querySelector('#media-dialog-counter');
+let galleryItems = [];
+let galleryIndex = 0;
+
+function showGalleryItem(index) {
+  if (!galleryItems.length) return;
+  galleryIndex = (index + galleryItems.length) % galleryItems.length;
+  const item = galleryItems[galleryIndex];
+  mediaDialogImage.src = item.dataset.gallerySrc;
+  mediaDialogImage.alt = item.querySelector('img')?.alt || item.dataset.galleryTitle || '';
+  mediaDialogTitle.textContent = item.dataset.galleryTitle || '';
+  mediaDialogCaption.textContent = item.dataset.galleryCaption || '';
+  mediaDialogCounter.textContent = `${galleryIndex + 1} / ${galleryItems.length}`;
+}
+
+function openGallery(trigger) {
+  galleryItems = [...document.querySelectorAll('.gallery-trigger')];
+  showGalleryItem(galleryItems.indexOf(trigger));
+  if (typeof mediaDialog.showModal === 'function') mediaDialog.showModal();
+  else mediaDialog.setAttribute('open', '');
+}
+
+document.addEventListener('click', (event) => {
+  const trigger = event.target.closest('.gallery-trigger');
+  if (trigger) openGallery(trigger);
+});
+
+document.querySelector('#media-dialog-close')?.addEventListener('click', () => mediaDialog.close());
+document.querySelector('#media-dialog-prev')?.addEventListener('click', () => showGalleryItem(galleryIndex - 1));
+document.querySelector('#media-dialog-next')?.addEventListener('click', () => showGalleryItem(galleryIndex + 1));
+mediaDialog?.addEventListener('click', (event) => {
+  if (event.target === mediaDialog) mediaDialog.close();
+});
+mediaDialog?.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowLeft') showGalleryItem(galleryIndex - 1);
+  if (event.key === 'ArrowRight') showGalleryItem(galleryIndex + 1);
+});
 
 function populateFilters() {
   const topics = [...new Set(trainings.map((item) => item.topic))].sort((a, b) => a.localeCompare(b, 'gl'));

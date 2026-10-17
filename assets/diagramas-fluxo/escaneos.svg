@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo lóxico: TRABALLOS ESCANEADOS</title>
+  <desc id="desc">Diagrama de fluxo normalizado con entradas, procesos, decisións, revisión humana, saída e final.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6f8178"/>
+    </marker>
+    <style>
+      .title{font:800 48px Arial,sans-serif;letter-spacing:3px;fill:#f3efe7;text-anchor:middle}
+      .legend{font:600 22px Arial,sans-serif;fill:#aeb9b2;text-anchor:middle}
+      .node-text{font:700 31px Arial,sans-serif;fill:#172023;text-anchor:middle}
+      .decision-text{font:800 30px Arial,sans-serif;fill:#172023;text-anchor:middle}
+      .label{font:800 24px Arial,sans-serif;fill:#f3efe7;text-anchor:middle}
+      .arrow{fill:none;stroke:#6f8178;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+      .loop{stroke:#e57a4a}
+    </style>
+  </defs>
+  <rect width="1600" height="1600" rx="72" fill="#111719"/>
+  <text x="800" y="70" class="title">TRABALLOS ESCANEADOS</text>
+  <text x="800" y="115" class="legend">elipse: inicio/final · paralelogramo: entrada/saída · rectángulo: proceso · rombo: decisión</text>
+
+  <ellipse cx="800" cy="195" rx="245" ry="52" fill="#a9b7aa"/>
+  <text x="800" y="205" class="node-text"><tspan x="800" dy="0">INICIO</tspan></text>
+  <path class="arrow" d="M800 247 V278"/>
+
+  <path d="M525 280 H1115 L1075 390 H485 Z" fill="#f3efe7" stroke="#a9b7aa" stroke-width="8"/>
+  <text x="800" y="318" class="node-text"><tspan x="800" dy="0">Lote PDF / imaxes</tspan><tspan x="800" dy="38">+ tarefa e criterios</tspan></text>
+  <path class="arrow" d="M800 390 V448"/>
+
+  <rect x="485" y="450" width="630" height="120" rx="18" fill="#dfe7df"/>
+  <text x="800" y="494" class="node-text"><tspan x="800" dy="0">Separar páxinas</tspan><tspan x="800" dy="38">e agrupar por código</tspan></text>
+  <path class="arrow" d="M800 570 V585"/>
+
+  <path d="M800 585 L1040 680 L800 775 L560 680 Z" fill="#f3c94f"/>
+  <text x="800" y="663" class="decision-text"><tspan x="800" dy="0">Emparellamento</tspan><tspan x="800" dy="38">completo e fiable?</tspan></text>
+  <text x="855" y="812" class="label">SI</text>
+  <path class="arrow" d="M800 775 V840"/>
+  <text x="1080" y="648" class="label">NON</text>
+  <path class="arrow loop" d="M1040 680 H1115"/>
+  <rect x="1115" y="625" width="400" height="110" rx="18" fill="#e57a4a"/>
+  <text x="1315" y="663" class="node-text"><tspan x="1315" dy="0">Resolver páxinas</tspan><tspan x="1315" dy="38">coa revisión humana</tspan></text>
+  <path class="arrow loop" d="M1315 625 V510 H1125"/>
+
+  <rect x="485" y="840" width="630" height="120" rx="18" fill="#dfe7df"/>
+  <text x="800" y="884" class="node-text"><tspan x="800" dy="0">Analizar evidencias</tspan><tspan x="800" dy="38">e propoñer devolución</tspan></text>
+  <path class="arrow" d="M800 960 V975"/>
+
+  <path d="M800 975 L1040 1070 L800 1165 L560 1070 Z" fill="#f3c94f"/>
+  <text x="800" y="1053" class="decision-text"><tspan x="800" dy="0">Validación docente</tspan><tspan x="800" dy="38">superada?</tspan></text>
+  <text x="855" y="1202" class="label">SI</text>
+  <path class="arrow" d="M800 1165 V1230"/>
+  <text x="1080" y="1038" class="label">NON</text>
+  <path class="arrow loop" d="M1040 1070 H1115"/>
+  <rect x="1115" y="1015" width="400" height="110" rx="18" fill="#e57a4a"/>
+  <text x="1315" y="1053" class="node-text"><tspan x="1315" dy="0">Corrixir asociación</tspan><tspan x="1315" dy="38">ou comentario</tspan></text>
+  <path class="arrow loop" d="M1315 1015 V900 H1125"/>
+
+  <path d="M525 1230 H1115 L1075 1340 H485 Z" fill="#f3efe7" stroke="#a9b7aa" stroke-width="8"/>
+  <text x="800" y="1268" class="node-text"><tspan x="800" dy="0">PDF individual</tspan><tspan x="800" dy="38">+ informe codificado</tspan></text>
+  <path class="arrow" d="M800 1340 V1385"/>
+
+  <ellipse cx="800" cy="1450" rx="270" ry="64" fill="#e57a4a"/>
+  <text x="800" y="1433" class="node-text"><tspan x="800" dy="0">Lote verificado</tspan><tspan x="800" dy="38">e rexistrado</tspan></text>
+</svg>

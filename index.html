@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#20252a">
   <title>Pablo Nimo · Formación para centros educativos</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=real-products-1">
+  <link rel="stylesheet" href="styles.css?v=gallery-flows-1">
 </head>
 <body>
   <a class="skip-link" href="#contido">Saltar ao contido</a>
@@ -229,6 +229,8 @@
           </section>
         </div>
 
+        <figure class="automation-diagram" id="lab-diagram" aria-live="polite"></figure>
+
         <div class="lab-proof">
           <div class="product-preview" id="lab-preview" aria-label="Mostras visuais dos produtos"></div>
           <div class="proof-copy">
@@ -356,7 +358,25 @@
     <a href="#inicio">Volver arriba ↑</a>
   </footer>
 
+  <dialog class="media-dialog" id="media-dialog" aria-labelledby="media-dialog-title">
+    <div class="media-dialog-shell">
+      <div class="media-dialog-toolbar">
+        <span id="media-dialog-counter">1 / 1</span>
+        <button type="button" id="media-dialog-close" aria-label="Pechar galería">Pechar ×</button>
+      </div>
+      <div class="media-dialog-stage">
+        <button type="button" class="media-dialog-nav media-dialog-prev" id="media-dialog-prev" aria-label="Imaxe anterior">←</button>
+        <img id="media-dialog-image" src="" alt="">
+        <button type="button" class="media-dialog-nav media-dialog-next" id="media-dialog-next" aria-label="Imaxe seguinte">→</button>
+      </div>
+      <div class="media-dialog-copy">
+        <strong id="media-dialog-title"></strong>
+        <p id="media-dialog-caption"></p>
+      </div>
+    </div>
+  </dialog>
+
   <script src="training-data.js" defer></script>
-  <script src="app.js?v=real-products-1" defer></script>
+  <script src="app.js?v=gallery-flows-1" defer></script>
 </body>
 </html>

@@ -157,10 +157,18 @@ h2 { max-width: 15ch; font-size: clamp(2.7rem, 5vw, 5rem); }
 .lab-stage-detail p { margin: 0; color: var(--paper-muted); font-size: .9rem; }
 .lab-stage-detail.is-human { box-shadow: inset .22rem 0 0 var(--terracotta); }
 .lab-stage-detail.is-human span { color: var(--terracotta); }
+.automation-diagram { display: grid; grid-template-columns: minmax(16rem, 30rem) 1fr; gap: clamp(1.2rem, 4vw, 3rem); align-items: center; margin: 0 0 1rem; padding: clamp(1rem, 2.5vw, 1.6rem); border: 1px solid var(--line); border-radius: 1rem; background: #20262a; }
+.diagram-media { position: relative; display: block; width: 100%; padding: 0; overflow: hidden; border: 0; border-radius: .8rem; background: #111719; cursor: zoom-in; }
+.diagram-media img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; transition: transform .25s ease; }
+.diagram-media span { position: absolute; right: .7rem; bottom: .7rem; padding: .45rem .7rem; border-radius: 999px; background: rgba(243,239,231,.92); color: var(--ink); font-size: .7rem; font-weight: 850; }
+.diagram-media:hover img, .diagram-media:focus-visible img { transform: scale(1.02); }
+.automation-diagram figcaption strong, .automation-diagram figcaption span { display: block; }
+.automation-diagram figcaption strong { max-width: 16ch; font-size: clamp(1.55rem, 3vw, 2.7rem); line-height: 1.05; }
+.automation-diagram figcaption span { max-width: 34rem; margin-top: 1rem; color: var(--paper-muted); font-size: 1rem; }
 .lab-proof { display: grid; grid-template-columns: minmax(26rem,1.25fr) minmax(18rem,.75fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding: clamp(1.2rem, 3vw, 2.5rem); border-radius: 1rem; background: #e9e4da; color: var(--ink); }
 .product-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; min-height: 27rem; align-items: stretch; padding: 1rem; border-radius: .9rem; overflow: hidden; background: #cfd8d0; }
 .preview-sample { display: flex; min-width: 0; margin: 0; border-radius: .7rem; overflow: hidden; flex-direction: column; background: #fffdf8; color: #20252a; box-shadow: 0 .8rem 1.8rem rgba(24,29,31,.14); }
-.preview-media { position: relative; display: grid; min-height: 18rem; overflow: hidden; place-items: center; background: #e8e4da; text-decoration: none; }
+.preview-media { position: relative; display: grid; width: 100%; min-height: 18rem; padding: 0; overflow: hidden; border: 0; place-items: center; background: #e8e4da; color: inherit; font: inherit; text-decoration: none; cursor: zoom-in; }
 .preview-media img { width: 100%; height: 100%; max-height: 22rem; object-fit: contain; transition: transform .25s ease; }
 .preview-media > span { position: absolute; right: .55rem; bottom: .55rem; padding: .38rem .52rem; border-radius: 999px; background: rgba(20,25,27,.86); color: #fff; font-size: .6rem; font-weight: 850; letter-spacing: .03em; }
 .preview-media:hover img, .preview-media:focus-visible img { transform: scale(1.025); }
@@ -173,6 +181,10 @@ h2 { max-width: 15ch; font-size: clamp(2.7rem, 5vw, 5rem); }
 .preview-poster .preview-media, .preview-screen .preview-media { background: #15211d; }
 .preview-story .preview-media img { object-fit: cover; }
 .preview-feedback .preview-media { background: #f4f1e9; }
+.preview-page-sample { grid-column: 1 / -1; }
+.preview-page-sample .preview-media { aspect-ratio: 16 / 8.5; cursor: pointer; }
+.preview-page-sample .preview-media img { max-height: none; object-fit: cover; }
+.preview-page-sample figcaption { min-height: 7rem; }
 .preview-text-sample { padding: .8rem; background: #edf4ea; }
 .preview-text-sample pre { margin: .35rem 0 .8rem; padding: .75rem; overflow: auto; flex: 1; border-radius: .55rem; background: #fff; color: #24402f; font: 600 .68rem/1.45 var(--font-body); white-space: pre-wrap; }
 .proof-copy .lab-column-label { color: #6a7770; }
@@ -181,6 +193,22 @@ h2 { max-width: 15ch; font-size: clamp(2.7rem, 5vw, 5rem); }
 .proof-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1.4rem 0; padding: 0; list-style: none; }
 .proof-tags li { padding: .45rem .65rem; border: 1px solid rgba(32,37,42,.2); border-radius: 999px; font-size: .75rem; font-weight: 800; }
 .proof-note { margin: 0; padding-top: 1rem; border-top: 1px solid rgba(32,37,42,.16); color: #687174; font-size: .78rem; }
+
+.media-dialog { width: min(94vw, 88rem); max-width: none; height: min(94vh, 64rem); max-height: none; padding: 0; overflow: hidden; border: 1px solid rgba(243,239,231,.2); border-radius: 1rem; background: #111719; color: var(--paper); box-shadow: 0 2rem 6rem rgba(0,0,0,.6); }
+.media-dialog::backdrop { background: rgba(7,10,11,.88); backdrop-filter: blur(8px); }
+.media-dialog-shell { display: grid; height: 100%; grid-template-rows: auto minmax(0,1fr) auto; }
+.media-dialog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; border-bottom: 1px solid var(--line); }
+.media-dialog-toolbar span { color: var(--paper-muted); font-size: .78rem; font-weight: 800; }
+.media-dialog-toolbar button { padding: .55rem .8rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--paper); font: inherit; font-weight: 800; cursor: pointer; }
+.media-dialog-stage { position: relative; display: grid; min-height: 0; place-items: center; padding: 1rem 4.5rem; background: #090d0e; }
+.media-dialog-stage img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.media-dialog-nav { position: absolute; z-index: 2; top: 50%; width: 3rem; height: 3rem; border: 1px solid rgba(243,239,231,.28); border-radius: 50%; background: rgba(17,23,25,.82); color: var(--paper); font: 800 1.2rem/1 var(--font-body); cursor: pointer; transform: translateY(-50%); }
+.media-dialog-prev { left: .8rem; }
+.media-dialog-next { right: .8rem; }
+.media-dialog-copy { padding: .9rem 1rem 1rem; border-top: 1px solid var(--line); }
+.media-dialog-copy strong { display: block; font-size: 1.05rem; }
+.media-dialog-copy p { margin: .25rem 0 0; color: var(--paper-muted); font-size: .85rem; }
+body:has(.media-dialog[open]) { overflow: hidden; }
 
 .projects { max-width: none; padding-inline: max(1.25rem, calc((100vw - var(--max)) / 2)); }
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
@@ -285,6 +313,7 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
   .lab-map { grid-template-columns: 1fr 1fr; }
   .lab-transform { grid-column: 1 / -1; grid-row: 1; }
   .lab-proof { grid-template-columns: 1fr 1fr; }
+  .automation-diagram { grid-template-columns: minmax(14rem, 24rem) 1fr; }
   .product-preview { grid-template-columns: repeat(3, minmax(8rem, 1fr)); overflow-x: auto; }
   .project-grid { grid-template-columns: 1fr 1fr; }
   .project-featured { grid-column: span 2; }
@@ -307,6 +336,8 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
   .hero-facts div:last-child { grid-column: 1 / -1; }
   .section-heading { margin-bottom: 2.5rem; }
   .skill-summary-grid, .lab-map, .lab-proof { grid-template-columns: 1fr; }
+  .automation-diagram { grid-template-columns: 1fr; }
+  .automation-diagram figcaption strong { max-width: none; }
   .skill-summary-card { min-height: 14rem; }
   .skills-bridge { align-items: stretch; flex-direction: column; }
   .skills-bridge .button { width: 100%; }
@@ -314,6 +345,10 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
   .lab-flow { grid-template-columns: 1fr 1fr; }
   .lab-flow button::after { display: none; }
   .product-preview { grid-template-columns: repeat(3, minmax(13rem, 1fr)); min-height: 22rem; align-items: stretch; }
+  .preview-page-sample { min-width: min(80vw, 24rem); }
+  .media-dialog { width: 100vw; height: 100vh; border-radius: 0; }
+  .media-dialog-stage { padding: .5rem 3.4rem; }
+  .media-dialog-nav { width: 2.5rem; height: 2.5rem; }
   .preview-sample:nth-child(2) { transform: none; }
   .process, .evidence-row, .training-summary, .project-grid, .training-controls { grid-template-columns: 1fr; }
   .project-featured, .search-field { grid-column: auto; }
