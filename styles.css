@@ -277,7 +277,7 @@ a.project-card:hover { transform: translateY(-.3rem); border-color: var(--terrac
 .contact h2 { max-width: 14ch; }
 .contact > p:not(.eyebrow) { max-width: 48rem; font-size: 1.2rem; }
 .contact-options { display: grid; grid-template-columns: 1.4fr .8fr .8fr; gap: 1rem; margin-top: 3rem; }
-.contact-options > * { position: relative; min-width: 0; padding: 1.25rem 1.25rem 1.25rem 4.15rem; border: 1px solid rgba(21,25,28,.22); border-radius: 1rem; color: #15191c; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.contact-options > * { position: relative; min-width: 0; padding: 1.25rem; border: 1px solid rgba(21,25,28,.22); border-radius: 1rem; color: #15191c; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
 .contact-options > a:hover { background: rgba(255,255,255,.23); transform: translateY(-2px); }
 .contact-options span, .contact-options strong { display: block; }
 .contact-options span { margin-bottom: .35rem; font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
@@ -398,8 +398,6 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
 .home-trajectory h2 { margin-bottom: 0; }
 .home-trajectory > div:last-child p { margin: 0 0 1.5rem; color: var(--paper-muted); font-size: 1.1rem; }
 .home-trajectory .button-ghost { border-color: var(--sage); }
-.contact-options:has(> a:nth-child(2):last-child) { grid-template-columns: 1fr 1fr; }
-.contact-options:has(> a:nth-child(2):last-child) > a { padding-left: 1.25rem; }
 
 /* Páxinas interiores */
 .inner-hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; min-height: 37rem; }
@@ -461,6 +459,5 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
   .itinerary-card-body { padding: 1.2rem; }
   .method-steps, .method-steps-five { grid-template-columns: 1fr; }
   .method-steps li > span { margin-bottom: 1rem; }
-  .contact-options:has(> a:nth-child(2):last-child) { grid-template-columns: 1fr; }
   .page-subnav { gap: 1.25rem; }
 }
