@@ -51,11 +51,15 @@ const skillLabData = {
       { title: 'Renderizar', detail: 'Xera o formato solicitado e inspecciona todas as páxinas antes da entrega.' }
     ],
     example: {
-      title: 'Ficha de valor posicional · 3.º EP',
-      copy: 'Documento imprimible coa xerarquía visual, os espazos de resposta e a versión final preparados para unha revisión completa.',
-      tags: ['A4', 'PDF', 'Actividade imprimible'],
-      note: 'Exemplo real sen datos persoais do alumnado.',
-      preview: { type: 'document', eyebrow: 'MATEMÁTICAS · 3.º EP', title: 'Valor posicional', meta: 'ENUNCIADO', rows: ['Descompón cada número', 'Representa as unidades', 'Explica o teu proceso'] }
+      title: 'Ficha, circular e diploma',
+      copy: 'A mesma skill pode producir materiais de aula, comunicacións para as familias e pezas institucionais coa identidade do centro.',
+      tags: ['A4', 'PDF imprimible', 'DOCX ou ODT editable'],
+      note: 'Mostras ilustrativas: permiten ver a estrutura do produto sen empregar datos reais.',
+      samples: [
+        { type: 'document', format: 'A4 · PDF', title: 'Ficha de valor posicional', rows: ['Nome e data', 'Exercicios graduados', 'Espazo para explicar'] },
+        { type: 'notice', format: 'A4 · PDF', title: 'Circular para familias', rows: ['Motivo e calendario', 'Instrucións claras', 'Contacto do centro'] },
+        { type: 'certificate', format: 'A4 horizontal', title: 'Diploma de participación', rows: ['Nome do proxecto', 'Nome da persoa', 'Sinatura e selo'] }
+      ]
     }
   },
   timbre: {
@@ -72,11 +76,15 @@ const skillLabData = {
       { title: 'Despregar', detail: 'Instala temporalmente, proba a restauración e conserva copias recuperables.' }
     ],
     example: {
-      title: 'Campaña semanal · cartel e pantallas',
-      copy: 'Unha mesma selección musical convértese en pezas coordinadas para impresión, móbil e as dúas televisións do centro.',
+      title: 'Cartel, pantalla e mensaxe semanal',
+      copy: 'Unha mesma selección musical convértese nun paquete coordinado para o corredor, as televisións e a difusión ás familias.',
       tags: ['A3', '3840 × 2160', 'WhatsApp', 'TV'],
-      note: 'A letra completa procede sempre dunha fonte local autorizada.',
-      preview: { type: 'timbre', eyebrow: 'TIMBRE · ESTA SEMANA', title: 'Seis momentos, unha selección', meta: 'CEIP DE BELESAR', rows: ['08:30 · apertura', '11:20 · recreo', '12:10 · peche'] }
+      note: 'Mostras ilustrativas. A letra completa só se incorpora desde unha fonte local autorizada.',
+      samples: [
+        { type: 'poster', format: 'A3 · PNG/PDF', title: 'Cartel do timbre', rows: ['Selección da semana', 'Artistas e cancións', 'Horarios principais'] },
+        { type: 'screen', format: '3840 × 2160', title: 'Pantalla de letra', rows: ['Título e artista', 'Letra por bloques', 'Marca do centro'] },
+        { type: 'message', format: 'WhatsApp', title: 'Mensaxe de difusión', rows: ['Esta semana soa…', 'Resumo da proposta', 'Nota para as familias'] }
+      ]
     }
   },
   semanario: {
@@ -93,11 +101,15 @@ const skillLabData = {
       { title: 'Publicar', detail: 'Só tras aprobación, xera miniaturas, comproba o carrusel e arquiva a semana verificada.', human: true }
     ],
     example: {
-      title: 'Semana 41 · entrada con galería',
-      copy: 'Unha portada breve conduce a apartados de aula e grupos de fotografías con pés informativos e copia ampliada.',
+      title: 'Entrada, galería e arquivo semanal',
+      copy: 'As notas e fotos convértense nunha páxina completa: crónica, imaxes contextualizadas e acceso ordenado ás semanas anteriores.',
       tags: ['Web', 'Galería', 'Móbil', 'Arquivo'],
       note: 'A vista é unha representación; as fotografías reais seguen a política de publicación do centro.',
-      preview: { type: 'web', eyebrow: 'SEMANARIO · SEMANA 41', title: 'Aprender tamén é deixar pegada', meta: '6 HISTORIAS · 18 FOTOS', rows: ['Investigamos', 'Construímos', 'Compartimos'] }
+      samples: [
+        { type: 'article', format: 'Entrada web', title: 'Crónica da semana', rows: ['Que fixemos', 'Como nos organizamos', 'Que aprendemos'] },
+        { type: 'gallery', format: 'Galería adaptable', title: 'Fotos con contexto', rows: ['Miniaturas coidadas', 'Pés informativos', 'Vista ampliada'] },
+        { type: 'archive', format: 'Arquivo web', title: 'Índice de semanas', rows: ['Semana e datas', 'Resumo breve', 'Acceso á entrada'] }
+      ]
     }
   },
   avaliacion: {
@@ -114,11 +126,15 @@ const skillLabData = {
       { title: 'Producir', detail: 'Crea e reabre os PDF, verifica o lote e consolida un seguimento minimizado.' }
     ],
     example: {
-      title: 'Lote demostrativo · código A01',
-      copy: 'A produción reúne as páxinas da actividade e engade unha devolución breve baseada só no que pode observarse.',
+      title: 'PDF individual, informe e seguimento',
+      copy: 'O lote escaneado remata en tres produtos separados: a devolución para cada alumno, a visión global do grupo e unha nota de continuidade.',
       tags: ['PDF individual', 'Informe codificado', 'Seguimento'],
       note: 'Demostración sintética: a web non publica traballos nin datos reais do alumnado.',
-      preview: { type: 'evaluation', eyebrow: 'DEVOLUCIÓN · A01', title: 'Actividade de mostra', meta: 'REVISIÓN DOCENTE', rows: ['Logro comprobable', 'Evidencia observada', 'Seguinte paso concreto'] }
+      samples: [
+        { type: 'feedback', format: 'PDF · código A01', title: 'Devolución individual', rows: ['Páxinas reunidas', 'Logro observable', 'Seguinte paso'] },
+        { type: 'report', format: 'Informe codificado', title: 'Visión do grupo', rows: ['Padróns detectados', 'Dificultades comúns', 'Decisións docentes'] },
+        { type: 'followup', format: 'Rexistro privado', title: 'Nota de seguimento', rows: ['Actividade e data', 'Evidencia mínima', 'Revisión pendente'] }
+      ]
     }
   }
 };
@@ -130,15 +146,19 @@ const labProducts = document.querySelector('#lab-products-list');
 const labFlow = document.querySelector('#lab-flow');
 const labStageDetail = document.querySelector('#lab-stage-detail');
 
-function renderProductPreview(preview) {
-  const rows = preview.rows.map((row) => `<span>${escapeHtml(row)}</span>`).join('');
-  return `
-    <div class="preview-art preview-${escapeHtml(preview.type)}">
-      <p>${escapeHtml(preview.eyebrow)}</p>
-      <strong>${escapeHtml(preview.title)}</strong>
-      <small>${escapeHtml(preview.meta)}</small>
-      <div>${rows}</div>
-    </div>`;
+function renderProductPreview(samples) {
+  return samples.map((sample, index) => {
+    const rows = sample.rows.map((row) => `<span>${escapeHtml(row)}</span>`).join('');
+    return `
+      <article class="preview-sample preview-${escapeHtml(sample.type)}">
+        <div class="preview-sample-head">
+          <span>${String(index + 1).padStart(2, '0')}</span>
+          <small>${escapeHtml(sample.format)}</small>
+        </div>
+        <strong>${escapeHtml(sample.title)}</strong>
+        <div class="preview-lines">${rows}</div>
+      </article>`;
+  }).join('');
 }
 
 function selectLabStage(index) {
@@ -174,7 +194,7 @@ function renderSkillLab(key) {
   document.querySelector('#lab-example-copy').textContent = skill.example.copy;
   document.querySelector('#lab-example-tags').innerHTML = skill.example.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join('');
   document.querySelector('#lab-example-note').textContent = skill.example.note;
-  document.querySelector('#lab-preview').innerHTML = renderProductPreview(skill.example.preview);
+  document.querySelector('#lab-preview').innerHTML = renderProductPreview(skill.example.samples);
 
   labTabs.forEach((tab) => {
     const selected = tab.dataset.skill === key;
