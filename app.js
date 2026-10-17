@@ -1,5 +1,6 @@
 const menuButton = document.querySelector('.menu-button');
 const mainNav = document.querySelector('#main-nav');
+const assetPrefix = document.body.dataset.assetPrefix || '';
 
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
@@ -166,8 +167,8 @@ function renderProductPreview(samples) {
     if (sample.href) {
       return `
         <figure class="preview-sample preview-${escapeHtml(sample.type)} preview-page-sample">
-          <a class="preview-media" href="${escapeHtml(sample.href)}" aria-label="Abrir dentro da web: ${escapeHtml(sample.title)}">
-            <img src="${escapeHtml(sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
+          <a class="preview-media" href="${escapeHtml(assetPrefix + sample.href)}" aria-label="Abrir dentro da web: ${escapeHtml(sample.title)}">
+            <img src="${escapeHtml(assetPrefix + sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
             <span>Abrir páxina web</span>
           </a>
           <figcaption>
@@ -179,8 +180,8 @@ function renderProductPreview(samples) {
     }
     return `
       <figure class="preview-sample preview-${escapeHtml(sample.type)}">
-        <button type="button" class="preview-media gallery-trigger" data-gallery-src="${escapeHtml(sample.src)}" data-gallery-title="${escapeHtml(sample.title)}" data-gallery-caption="${escapeHtml(sample.caption)}" aria-label="Abrir na galería: ${escapeHtml(sample.title)}">
-          <img src="${escapeHtml(sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
+        <button type="button" class="preview-media gallery-trigger" data-gallery-src="${escapeHtml(assetPrefix + sample.src)}" data-gallery-title="${escapeHtml(sample.title)}" data-gallery-caption="${escapeHtml(sample.caption)}" aria-label="Abrir na galería: ${escapeHtml(sample.title)}">
+          <img src="${escapeHtml(assetPrefix + sample.src)}" alt="${escapeHtml(sample.alt)}" loading="lazy" decoding="async">
           <span>Ver na galería</span>
         </button>
         <figcaption>
@@ -227,8 +228,8 @@ function renderSkillLab(key) {
   document.querySelector('#lab-example-note').textContent = skill.example.note;
   document.querySelector('#lab-preview').innerHTML = renderProductPreview(skill.example.samples);
   labDiagram.innerHTML = `
-    <button type="button" class="diagram-media gallery-trigger" data-gallery-src="${escapeHtml(skill.diagram.src)}" data-gallery-title="${escapeHtml(skill.diagram.title)}" data-gallery-caption="${escapeHtml(skill.diagram.caption)}" aria-label="Ampliar: ${escapeHtml(skill.diagram.title)}">
-      <img src="${escapeHtml(skill.diagram.src)}" alt="${escapeHtml(skill.diagram.alt)}" loading="lazy" decoding="async">
+    <button type="button" class="diagram-media gallery-trigger" data-gallery-src="${escapeHtml(assetPrefix + skill.diagram.src)}" data-gallery-title="${escapeHtml(skill.diagram.title)}" data-gallery-caption="${escapeHtml(skill.diagram.caption)}" aria-label="Ampliar: ${escapeHtml(skill.diagram.title)}">
+      <img src="${escapeHtml(assetPrefix + skill.diagram.src)}" alt="${escapeHtml(skill.diagram.alt)}" loading="lazy" decoding="async">
       <span>Ampliar diagrama</span>
     </button>
     <figcaption><strong>${escapeHtml(skill.diagram.title)}</strong><span>${escapeHtml(skill.diagram.caption)}</span></figcaption>`;
@@ -289,6 +290,9 @@ function showGalleryItem(index) {
 function openGallery(trigger) {
   galleryItems = [...document.querySelectorAll('.gallery-trigger')];
   showGalleryItem(galleryItems.indexOf(trigger));
+  const hasMultipleItems = galleryItems.length > 1;
+  document.querySelector('#media-dialog-prev').hidden = !hasMultipleItems;
+  document.querySelector('#media-dialog-next').hidden = !hasMultipleItems;
   if (typeof mediaDialog.showModal === 'function') mediaDialog.showModal();
   else mediaDialog.setAttribute('open', '');
 }
@@ -382,7 +386,7 @@ loadMoreButton?.addEventListener('click', () => {
   renderTrainings();
 });
 
-if (trainings.length) {
+if (trainingList && trainings.length) {
   populateFilters();
   updateSummary();
   renderTrainings();
