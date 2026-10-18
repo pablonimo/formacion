@@ -45,7 +45,7 @@ const skillLabData = {
     description: 'Aplica a identidade visual do CEIP sen perder lexibilidade, función nin control sobre a información.',
     origins: ['Contido e finalidade', 'Datos vixentes do centro', 'Guía visual e modelos ODT'],
     products: ['Ficha ou actividade', 'Circular, diploma ou certificado', 'PDF final verificado'],
-    diagram: { src: 'assets/diagramas-fluxo/documentos.png', title: 'Fluxo lóxico dos documentos de centro', caption: 'Entrada, decisións, revisión docente e exportación final nun esquema normalizado.', alt: 'Diagrama de fluxo normalizado da automatización de documentos de centro' },
+    diagram: { title: 'Do encargo ao documento listo', caption: 'Dous controis permiten completar datos e revisar o resultado antes da entrega.', input: 'Finalidade, contido e datos vixentes', prepare: 'Clasificar o documento e escoller o modelo', check1: 'Están completos os datos e serve o formato?', correction1: 'Completar datos ou cambiar o modelo', produce: 'Compoñer coa identidade visual do CEIP', check2: 'Supera a revisión docente e visual?', correction2: 'Corrixir o contido ou a maquetación', output: 'DOCX ou ODT e PDF verificado', end: 'Documento listo para usar' },
     stages: [
       { title: 'Clasificar', detail: 'Identifica quen vai usar o documento, en que soporte e que acción debe permitir.' },
       { title: 'Compoñer', detail: 'Escolle unha plantilla oficial ou constrúe a xerarquía con tipografía, cor e espazos coherentes.' },
@@ -70,7 +70,7 @@ const skillLabData = {
     description: 'Coordina música, comunicación e pantallas nun fluxo único, con revisión antes de calquera despregamento.',
     origins: ['MP3 e información musical', 'Letras locais e portadas', 'Calendario lectivo e horarios'],
     products: ['Cartel A3 e PNG', 'Pantallas de letra 4K', 'WhatsApp e paquete para TV'],
-    diagram: { src: 'assets/diagramas-fluxo/timbre.png', title: 'Fluxo lóxico do timbre semanal', caption: 'A selección musical convértese nun paquete multiformato só despois dos controis e da aprobación humana.', alt: 'Diagrama de fluxo normalizado da automatización do timbre semanal' },
+    diagram: { title: 'Da música á campaña semanal', caption: 'A programación nas pantallas só chega despois da aprobación expresa.', input: 'Música, calendario e materiais locais', prepare: 'Inventariar cancións, horarios e formatos', check1: 'Son utilizables as fontes e o contido?', correction1: 'Substituír a fonte ou adecuar a selección', produce: 'Preparar cartel A3, pantalla 16:9 e mensaxe', check2: 'Hai aprobación humana expresa?', correction2: 'Revisar o paquete e presentalo de novo', output: 'Paquete aprobado e programación temporal', end: 'Campaña publicada e recuperable' },
     stages: [
       { title: 'Inventariar', detail: 'Detecta cancións, horas, idioma, portadas e correspondencia entre os ficheiros.' },
       { title: 'Adecuar', detail: 'Revisa transcrición, galego normativo e posibles expresións non axeitadas para o centro.', human: true },
@@ -96,7 +96,7 @@ const skillLabData = {
     description: 'Converte notas e fotografías dispersas nunha crónica fiable, coidadosa coa privacidade e fácil de consultar.',
     origins: ['Notas de feitos realizados', 'Fotos da semana', 'Estado das semanas ISO'],
     products: ['Entrada web en galego', 'Galería con pés propios', 'Arquivo semanal navegable'],
-    diagram: { src: 'assets/diagramas-fluxo/semanario.png', title: 'Fluxo lóxico do semanario', caption: 'Contraste, privacidade e revisión docente forman parte do proceso antes de publicar e arquivar.', alt: 'Diagrama de fluxo normalizado da automatización do semanario de aula' },
+    diagram: { title: 'Das notas á semana publicada', caption: 'A crónica só avanza con feitos contrastados, imaxes seguras e revisión docente.', input: 'Notas, fotografías e estado da semana', prepare: 'Ordenar feitos e contrastar datas', check1: 'Feitos confirmados e privacidade protexida?', correction1: 'Retirar ou pixelar a imaxe; aclarar a dúbida', produce: 'Redactar a crónica e os pés de foto', check2: 'Aprobou o docente a entrada completa?', correction2: 'Axustar texto, imaxes ou orde e revisar', output: 'Entrada web, galería e índice semanal', end: 'Semana publicada e arquivada' },
     stages: [
       { title: 'Situar', detail: 'Distingue semanas publicadas, rematadas, actuais e incompletas antes de escoller.' },
       { title: 'Contrastar', detail: 'Cruza notas, datas e imaxes; unha actividade prevista non se presenta como realizada.' },
@@ -120,7 +120,7 @@ const skillLabData = {
     description: 'Organiza lotes complexos e prepara evidencias e comentarios sen automatizar a decisión docente.',
     origins: ['PDF ou imaxes escaneadas', 'Actividade e criterios orixinais', 'Contexto do grupo'],
     products: ['PDF individual revisado', 'Informe xeral codificado', 'Nota para o seguimento docente'],
-    diagram: { src: 'assets/diagramas-fluxo/escaneos.png', title: 'Fluxo lóxico dos traballos escaneados', caption: 'As páxinas agrúpanse por código, revísanse con criterios e só se producen despois da validación docente.', alt: 'Diagrama de fluxo normalizado da automatización de traballos escaneados' },
+    diagram: { title: 'Do lote á devolución individual', caption: 'Cada asociación de páxinas e comentario queda baixo validación docente.', input: 'PDF ou imaxes, tarefa e criterios', prepare: 'Separar páxinas e agrupar por código', check1: 'É completo e fiable o emparellamento?', correction1: 'Resolver as páxinas coa revisión humana', produce: 'Analizar evidencias e propoñer devolución', check2: 'Validou o docente asociación e comentario?', correction2: 'Corrixir a asociación ou a devolución', output: 'PDF individual e informe codificado', end: 'Lote verificado e rexistrado' },
     stages: [
       { title: 'Inventariar', detail: 'Rexistra páxinas, orientación, lexibilidade, duplicados e OCR sen modificar os orixinais.' },
       { title: 'Agrupar', detail: 'Relaciona caras, actividade e código do alumno; as asociacións dubidosas quedan pendentes.' },
@@ -227,12 +227,25 @@ function renderSkillLab(key) {
   document.querySelector('#lab-example-tags').innerHTML = skill.example.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join('');
   document.querySelector('#lab-example-note').textContent = skill.example.note;
   document.querySelector('#lab-preview').innerHTML = renderProductPreview(skill.example.samples);
+  const flow = skill.diagram;
+  const flowNode = (label, content, className = '') => `<li class="flow-node ${className}"><span>${label}</span><strong>${escapeHtml(content)}</strong></li>`;
+  const flowGate = (number, question, correction) => `
+    <li class="flow-gate">
+      <div class="flow-question"><span>Control ${number} · decisión</span><strong>${escapeHtml(question)}</strong></div>
+      <div class="flow-rework"><span>Non · corrixir e volver ↶</span><strong>${escapeHtml(correction)}</strong></div>
+      <span class="flow-continue">Si · continuar ↓</span>
+    </li>`;
   labDiagram.innerHTML = `
-    <button type="button" class="diagram-media gallery-trigger" data-gallery-src="${escapeHtml(assetPrefix + skill.diagram.src)}" data-gallery-title="${escapeHtml(skill.diagram.title)}" data-gallery-caption="${escapeHtml(skill.diagram.caption)}" aria-label="Ampliar: ${escapeHtml(skill.diagram.title)}">
-      <img src="${escapeHtml(assetPrefix + skill.diagram.src)}" alt="${escapeHtml(skill.diagram.alt)}" loading="lazy" decoding="async">
-      <span>Ampliar diagrama</span>
-    </button>
-    <figcaption><strong>${escapeHtml(skill.diagram.title)}</strong><span>${escapeHtml(skill.diagram.caption)}</span></figcaption>`;
+    <figcaption><strong>${escapeHtml(flow.title)}</strong><span>${escapeHtml(flow.caption)}</span></figcaption>
+    <ol class="flow-chart" aria-label="${escapeHtml(flow.title)}">
+      ${flowNode('Entrada', flow.input, 'flow-input')}
+      ${flowNode('Preparación', flow.prepare)}
+      ${flowGate(1, flow.check1, flow.correction1)}
+      ${flowNode('Elaboración', flow.produce)}
+      ${flowGate(2, flow.check2, flow.correction2)}
+      ${flowNode('Saída', flow.output, 'flow-output')}
+      ${flowNode('Resultado', flow.end, 'flow-end')}
+    </ol>`;
 
   labTabs.forEach((tab) => {
     const selected = tab.dataset.skill === key;
