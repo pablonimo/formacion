@@ -434,6 +434,16 @@ footer a { color: var(--sage); font-weight: 750; text-decoration: none; }
 .evidence-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .evidence-image span { position: absolute; right: .8rem; bottom: .8rem; padding: .4rem .6rem; border-radius: 999px; background: rgba(243,239,231,.92); color: var(--ink); font-size: .72rem; font-weight: 850; }
 .evidence-section .outcome-note { margin-top: 1.5rem; }
+.radio-cycle { margin-block: 2.5rem; }
+.radio-benefits { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; margin-block: 2.5rem; }
+.radio-benefits article { border-top: 1px solid var(--line, #d9d3c8); padding-top: 1.2rem; min-width: 0; }
+.radio-benefits h3 { font-size: 1.35rem; margin-bottom: .65rem; }
+.case-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; margin-block: 2rem; }
+.development-flow { font-weight: 700; font-size: 1.2rem; line-height: 1.8; }
+#radio-produto h2 { max-width: 25ch; }
+#radio-produto .evidence-feature { color: #f3efe7; }
+#radio-produto .evidence-feature h3 { color: #f3efe7; }
+@media(max-width: 600px) { .radio-benefits { grid-template-columns: 1fr; } }
 .method-steps-five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .method-steps-five li { padding: 1.1rem; }
 .method-steps-five h3 { font-size: 1.3rem; }
